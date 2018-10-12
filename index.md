@@ -6,12 +6,12 @@ address: "강원도 춘천시 한림대학길 1"      # full street address of w
 country: "kr"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1)
 language: "kr"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/ISO_639-1)
 latlng: "37.886120, 127.738674"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use https://www.latlong.net/)
-humandate: "Oct 27-28, 2018"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humandate: "2018년 10월 27-28일"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
 humantime: "10:00 am - 17:00 pm"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
 startdate: 2018-10-27      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
 enddate: 2018-10-28        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["Nick Tierney", "Kwangchun Lee"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["Yeouhn Sung"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+instructor: ["Nick Tierney", "이광춘"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: ["성여운"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 email: ["kwangchun.lee.7@gmail.com"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 collaborative_notes:             # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
@@ -45,11 +45,6 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
   scrolling="auto">
 </iframe>
 {% endif %}
-
-<h4>This is the workshop template. Delete these lines and use it to customize your own website.
-If you are running a self-organized workshop or have not put in a workshop request yet, please also fill in 
-<a href="{{site.amy_site}}/submit">this workshop request form</a> to let us know about your workshop
-and our administrator may contact you if we need any extra information.</h4>
 
 <h2 id="general">General Information</h2>
 
@@ -91,12 +86,11 @@ and our administrator may contact you if we need any extra information.</h4>
 {% endcomment %}
 {% if page.latlng %}
 <p id="where">
-  <strong>Where:</strong>
+  <strong>장소:</strong>
   {{page.address}}.
-  Get directions with
   <a href="//www.openstreetmap.org/?mlat={{page.latlng | replace:',','&mlon='}}&zoom=16">OpenStreetMap</a>
-  or
-  <a href="//maps.google.com/maps?q={{page.latlng}}">Google Maps</a>.
+  혹은
+  <a href="//maps.google.com/maps?q={{page.latlng}}">구글지도(Google Maps)</a>을 참조하세요.
 </p>
 {% endif %}
 
@@ -107,7 +101,7 @@ and our administrator may contact you if we need any extra information.</h4>
 {% endcomment %}
 {% if page.humandate %}
 <p id="when">
-  <strong>When:</strong>
+  <strong>일시:</strong>
   {{page.humandate}}.
   {% include workshop_calendar.html %}
 </p>
@@ -119,10 +113,9 @@ and our administrator may contact you if we need any extra information.</h4>
   Modify the block below if there are any special requirements.
 {% endcomment %}
 <p id="requirements">
-  <strong>Requirements:</strong> Participants must bring a laptop with a
-  Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges
-  on. They should have a few specific software packages installed (listed
-  <a href="#setup">below</a>). They are also required to abide by
+  <strong>사전 준비사항:</strong> 워크샵에 참여하시는 분은 관리자 권한을 갖는 맥, 리눅스, 윈도우 운영체제가 탐재된 노트북을 지참하셔야 합니다. 
+  (스마트폰, 태블릿, 크롬북 등은 권장하지 않음) <a href="#setup">아래</a> 설정 표기된 데이터과학 컴퓨팅을 위한 사전 소프트웨어 팩키지를 설치하셔야 됩니다.  
+
   {% if page.carpentry == "swc" %}
   Software Carpentry's
   {% elsif page.carpentry == "dc" %}
@@ -130,7 +123,7 @@ and our administrator may contact you if we need any extra information.</h4>
   {% elsif page.carpentry == "lc" %}
   Library Carpentry's
   {% endif %}
-  <a href="{{site.swc_site}}/conduct.html">Code of Conduct</a>.
+  <a href="{{site.swc_site}}/conduct.html">행동강령(code of conduct)도</a> 필히 준수하셔야 합니다. 
 </p>
 
 {% comment %}
@@ -140,21 +133,16 @@ and our administrator may contact you if we need any extra information.</h4>
   special instructions.
 {% endcomment %}
 <p id="accessibility">
-  <strong>Accessibility:</strong> We are committed to making this workshop
-  accessible to everybody.
-  The workshop organizers have checked that:
+  <strong>접근성(Accessibility):</strong> 소프트웨어 카펜트리는 누구나 워크샵에 참석할 수 있도록 최선을 다하고 있습니다.
+  워크샵 조직위는 다음을 확인했습니다:
 </p>
 <ul>
-  <li>The room is wheelchair / scooter accessible.</li>
-  <li>Accessible restrooms are available.</li>
+  <li>휠체어/스쿠터를 타고 강의실에 입장할 수 있습니다.</li>
+  <li>화장실도 마찬가지로 휠체어/스쿠터로 이용가능합니다.</li>
 </ul>
 <p>
-  Materials will be provided in advance of the workshop and
-  large-print handouts are available if needed by notifying the
-  organizers in advance.  If we can help making learning easier for
-  you (e.g. sign-language interpreters, lactation facilities) please
-  get in touch (using contact details below) and we will
-  attempt to provide them.
+  워크샵 이전에 모든 강의자료는 제공되고, 워크샵 조직위에 미리 알려주시면 필요한 경우 출력물 제공도 가능합니다. 
+  수화 통역사나 수유시설처럼 학습 용이성을 증진시킬 수만 있다면 다음 전자우편으로 연락주시면 최대한 제공할 수 있도록 노력할 것입니다.
 </p>
 
 {% comment %}
@@ -163,8 +151,8 @@ and our administrator may contact you if we need any extra information.</h4>
   Display the contact email address set in the configuration file.
 {% endcomment %}
 <p id="contact">
-  <strong>Contact</strong>:
-  Please email
+  <strong>연락처</strong>:
+  추가 정보가 필요한 경우 전자우편주소
   {% if page.email %}
     {% for email in page.email %}
       {% if forloop.last and page.email.size > 1 %}
@@ -179,11 +167,11 @@ and our administrator may contact you if we need any extra information.</h4>
   {% else %}
     to-be-announced
   {% endif %}
-  for more information.
+  로 연락주세요.
 </p>
 
+<!-- 
 <hr/>
-
 {% comment %} 
  SURVEYS - DO NOT EDIT SURVEY LINKS 
 {% endcomment %}
@@ -199,6 +187,7 @@ and our administrator may contact you if we need any extra information.</h4>
 <p><a href="{{ site.lc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
 <p><a href="{{ site.lc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
 {% endif %}
+ -->
 
 <hr/>
 
@@ -210,7 +199,7 @@ and our administrator may contact you if we need any extra information.</h4>
   to match your plans.  You may also want to change 'Day 1' and 'Day
   2' to be actual dates or days of the week.
 {% endcomment %}
-<h2 id="schedule">Schedule</h2>
+<h2 id="schedule">워크샵 일정</h2>
 
 {% if page.carpentry == "swc" %}
   {% include sc/schedule.html %}
@@ -255,7 +244,7 @@ and our administrator may contact you if we need any extra information.</h4>
   please preview your site before committing, and make sure to run
   'tools/check' as well.
 {% endcomment %}
-<h2 id="syllabus">Syllabus</h2>
+<h2 id="syllabus">강의 계획서(Syllabus)</h2>
 
 {% if page.carpentry == "swc" %}
   {% include sc/syllabus.html %}
@@ -279,42 +268,38 @@ and our administrator may contact you if we need any extra information.</h4>
   'tools/check' as well.
 {% endcomment %}
 
-<h2 id="setup">Setup</h2>
+<h2 id="setup">프로그램 설치</h2>
 
-<p>
-  To participate in a
+<p>  
   {% if page.carpentry == "swc" %}
-  Software Carpentry
+  소프트웨어(Software Carpentry)
   {% elsif page.carpentry == "dc" %}
   Data Carpentry
   {% elsif page.carpentry == "lc" %}
   Library Carpentry
   {% endif %}
-  workshop,
-  you will need access to the software described below.
-  In addition, you will need an up-to-date web browser.
+  워크샵에 참석하기 위해서 다음에 기술된 소프트웨어를 설치한다. 워크샵 시작 전에 모든 소프트웨어가 제대로 설치되었는지 확인해야 한다. (혹은 적어도 설치 프로그램을 다운로드 받아온다.)
+  추가로 최신 웹브라우저(파이어폭스/크롬 등) 버전이 필요하다.
 </p>
 <p>
-  We maintain a list of common issues that occur during installation as a reference for instructors
-  that may be useful on the
-  <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
+  설치과정에서 흔히 발견되는 이슈를 목록으로 관리하고 있다. 
+  강사나 조교에게 <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">환경설정 문제와 해결책 위키 웹페이지</a>가 도움이 될 수 있다.
 </p>
 
 <div id="shell"> {% comment %} Start of 'shell' section. {% endcomment %}
-  <h3>The Bash Shell</h3>
+  <h3>Bash 쉘 (Bash Shell)</h3>
 
   <p>
-    Bash is a commonly-used shell that gives you the power to do simple
-    tasks more quickly.
+    Bash는 가장 일반적으로 사용되는 쉘 중의 하나다. 쉘을 사용하면 컴퓨터로 더 많은 작업을 더 빠르게 할 수 있는 동력을 제공받을 수 있다.
   </p>
 
   <div class="row">
     <div class="col-md-4">
-      <h4 id="shell-windows">Windows</h4>
-      <a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>
+      <h4 id="shell-windows">윈도우(Windows)</h4>
+      <a href="https://www.youtube.com/watch?v=339AEqk9c-8">동영상 튜토리얼(Video Tutorial)</a>
       <ol>
-        <li>Download the Git for Windows <a href="https://git-for-windows.github.io/">installer</a>.</li>
-        <li>Run the installer and follow the steps below:
+        <li>Git for Windows <a href="https://git-for-windows.github.io/">installer</a>를 다운로드 받는다.</li>
+        <li>installer를 실행하고 다음 절차를 따라 한다:
           <ol>
             {% comment %} Git 2.18.0 Setup {% endcomment %}
             <li>
@@ -368,25 +353,16 @@ and our administrator may contact you if we need any extra information.</h4>
       <p>This will provide you with both Git and Bash in the Git Bash program.</p>
     </div>
     <div class="col-md-4">
-      <h4 id="shell-macosx">macOS</h4>
+      <h4 id="shell-macosx">맥(macOS)</h4>
       <p>
-        The default shell in all versions of macOS is Bash, so no
-        need to install anything.  You access Bash from the Terminal
-        (found in
-        <code>/Applications/Utilities</code>).
-        See the Git installation <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a>
-        for an example on how to open the Terminal.
-        You may want to keep
-        Terminal in your dock for this workshop.
+      	모든 맥 OS에서 기본 쉘은 bash라서 별도로 설치할 필요가 없다. 터미널(<code>/Applications/Utilities</code>)에서 bash를 사용할 수 있다. 워크샵에서 터미널을 바로가기로 고정한다.
+        Git 설치에 대해서 <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a>을 참조하면 터미널을 여는 방법이 소개되어 있다.
       </p>
     </div>
     <div class="col-md-4">
-      <h4 id="shell-linux">Linux</h4>
+      <h4 id="shell-linux">리눅스(Linux)</h4>
       <p>
-        The default shell is usually Bash, but if your
-        machine is set up differently you can run it by opening a
-        terminal and typing <code>bash</code>.  There is no need to
-        install anything.
+        기본 쉘이 bash다. 하지만 만약 컴퓨터 설정이 다르게 되어 있다면, 터미널을 열어 <code>bash</code>를 타이핑한다. 별도의 추가 설치가 불필요하다.
       </p>
     </div>
   </div>
@@ -396,22 +372,16 @@ and our administrator may contact you if we need any extra information.</h4>
            is given at https://help.github.com/articles/supported-browsers/{% endcomment %}
   <h3>Git</h3>
   <p>
-    Git is a version control system that lets you track who made changes
-    to what when and has options for easily updating a shared or public
-    version of your code
-    on <a href="https://github.com/">github.com</a>. You will need a
-    <a href="https://help.github.com/articles/supported-browsers/">supported</a>
-    web browser (current versions of Chrome, Firefox or Safari,
-    or Internet Explorer version 9 or above).
+    Git은 현존하는 최강의 버젼 제어 시스템(version control system)이다. 
+    Git을 사용해서 누가(who) 무엇(what)에 언제(when) 변경을 했는지 추적할 수 있다. 또한 <a href="https://github.com/">github.com</a>에 공유 혹은 공개 버젼의 코드를 쉽게 갱신할 수도 있다.
+    크롬(Chrome), 불여우(Firefox), 사파리(Safari) 혹은 인터넷 익스플러로 버전 9이상 <a href="https://help.github.com/articles/supported-browsers/">호환되는 웹브라우저</a>가 필요하다.
   </p>
   <p>
-    You will need an account at <a href="https://github.com/">github.com</a>
-    for parts of the Git lesson. Basic GitHub accounts are free. We encourage
-    you to create a GitHub account if you don't have one already.
-    Please consider what personal information you'd like to reveal. For
-    example, you may want to review these
-    <a href="https://help.github.com/articles/keeping-your-email-address-private/">instructions
-    for keeping your email address private</a> provided at GitHub.
+  	버전관리 Git 수업에 <a href="https://github.com/">github.com</a> 계정이 필요하다.
+  	기본 GitHub 계정은 무료다. 아직 GitHub 계정이 없는 경우 계정 생성을 강력히 권장한다.
+  	대신에 노출되는 개인정보에 대해서는 다시 한번 검토하기를 바란다.
+  	예를 들어, 마이크로소프트가 인수한 GitHub에 <a href="https://help.github.com/articles/keeping-your-email-address-private/">instructions
+    for keeping your email address private</a> 게시글을 검토할 필요가 있따.
   </p>
 
   <div class="row">
@@ -452,7 +422,7 @@ and our administrator may contact you if we need any extra information.</h4>
 </div> {% comment %} End of 'Git' section. {% endcomment %}
 
 <div id="editor"> {% comment %} Start of 'editor' section. {% endcomment %}
-  <h3>Text Editor</h3>
+  <h3>텍스트 편집기(Text Editor)</h3>
 
   <p>
     When you're writing code, it's nice to have a text editor that is
