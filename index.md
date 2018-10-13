@@ -303,54 +303,53 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
           <ol>
             {% comment %} Git 2.18.0 Setup {% endcomment %}
             <li>
-                Click on "Next" four times (two times if you've previously
-                installed Git).  You don't need to change anything
-                in the Information, location, components, and start menu screens.
+            	(Git이 설치된 경우 2번) "Next" 버튼을 4번 클릭한다.
+            	Information, location, components, start menu 화면에서 설정을 전혀 변경할 필요가 없다.
             </li>
             <li>
                 <strong>
-                Select “Use the nano editor by default” and click on “Next”.
+                “Use the nano editor by default”을 선택하고 “Next”를 클릭한다.
                 </strong>
             </li>
             {% comment %} Adjusting your PATH environment {% endcomment %}
             <li>
-                Keep "Use Git from the Windows Command Prompt" selected and click on "Next".
-                If you forgot to do this programs that you need for the workshop will not work properly.
-                If this happens rerun the installer and select the appropriate option.
+                "Use Git from the Windows Command Prompt" 선택을 유지하고 "Next"를 클릭한다.
+                상기 작업과정을 잊게 되면, 워크샵에 필요한 프로그램이 정상적으로 동작하지 않게된다.
+                이런 일이 발생되면 적절한 선택옵션을 선택해서, 설치프로그램을 재실행한다.
             </li>
             {% comment %} Choosing the SSH executable {% endcomment %}
-            <li>Click on "Next".</li>
+            <li>"Next"을 클릭한다.</li>
             {% comment %} Configuring the line ending conversions {% endcomment %}
             <li>
-                Keep "Checkout Windows-style, commit Unix-style line endings" selected and click on "Next".
+                "Checkout Windows-style, commit Unix-style line endings"을 선택하고 "Next"를 클릭한다.
             </li>
             {% comment %} Configuring the terminal emulator to use with Git Bash {% endcomment %}
             <li>
               <strong>
-                Select "Use Windows' default console window" and click on "Next".
+                "Use Windows' default console window"을 선택하고 "Next"를 클릭한다.
               </strong>
             </li>
             {% comment %} Configuring experimental performance tweaks {% endcomment %}
-            <li>Click on "Install".</li>
+            <li>"Install"을 클릭한다.</li>
             {% comment %} Installing {% endcomment %}
             {% comment %} Completing the Git Setup Wizard {% endcomment %}
-            <li>Click on "Finish".</li>
+            <li>"Finish"를 클릭한다.</li>
           </ol>
         </li>
         <li>
-          If your "HOME" environment variable is not set (or you don't know what this is):
+          "HOME" 환경변수가 설정되지 않은 경우(혹은, 환경변수 설정법을 모르는 경우):
           <ol>
-            <li>Open command prompt (Open Start Menu then type <code>cmd</code> and press [Enter])</li>
+            <li>명령 프롬프트를 연다 (즉, 시작메뉴를 열고 <code>cmd</code>을 입력하고 [Enter]를 친다.)</li>
             <li>
-              Type the following line into the command prompt window exactly as shown:
+              다음에 나온 명령어를 명령 프롬프트에 정확하게 타이핑한다:	
               <p><code>setx HOME "%USERPROFILE%"</code></p>
             </li>
-            <li>Press [Enter], you should see <code>SUCCESS: Specified value was saved.</code></li>
-            <li>Quit command prompt by typing <code>exit</code> then pressing [Enter]</li>
+            <li>[Enter]를 치게 되면, <code>SUCCESS: Specified value was saved.</code></li> 메시지가 나온다.
+            <li><code>exit</code>를 타이핑하고 [Enter]를 쳐서 명령 프롬프트를 빠져나온다.</li>
           </ol>
         </li>
       </ol>
-      <p>This will provide you with both Git and Bash in the Git Bash program.</p>
+      <p>Git Bash 프로그램이 설치되면 Git과 Bash 모두 사용가능하게 된다.</p>
     </div>
     <div class="col-md-4">
       <h4 id="shell-macosx">맥(macOS)</h4>
@@ -386,36 +385,33 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
 
   <div class="row">
     <div class="col-md-4">
-      <h4 id="git-windows">Windows</h4>
+      <h4 id="git-windows">윈도우</h4>
       <p>
-        Git should be installed on your computer as part of your Bash
-        install (described above).
+      	Git은 앞서 기술된 Bash 설치할 때 컴퓨터에 설치된다.
       </p>
     </div>
     <div class="col-md-4">
-      <h4 id="git-macosx">macOS</h4>
-      <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">Video Tutorial</a>
+      <h4 id="git-macosx">맥(macOS)</h4>
+      <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">동영상 튜토리얼(Video Tutorial)</a>
       <p>
-        <strong>For OS X 10.9 and higher</strong>, install Git for Mac
-        by downloading and running the most recent "mavericks" installer from
-        <a href="http://sourceforge.net/projects/git-osx-installer/files/">this list</a>.
-        Because this installer is not signed by the developer, you may have to
-        right click (control click) on the .pkg file, click Open, and click
-        Open on the pop up window. 
-        After installing Git, there will not be anything in your <code>/Applications</code> folder,
-        as Git is a command line program.
-        <strong>For older versions of OS X (10.5-10.8)</strong> use the
-        most recent available installer labelled "snow-leopard"
-        <a href="http://sourceforge.net/projects/git-osx-installer/files/">available here</a>.
+        <strong>OS X 10.9 버전 이상에 대해서</strong>, 
+        <a href="http://sourceforge.net/projects/git-osx-installer/files/">목록</a>에서 
+        가장 최신 "mavericks" 설치자를 다운로드 받아 맥용 Git(Git for Mac)을 설치한다.
+        다운로드 받은 설치파일은 개발자용으로 인증된 것이 아니라서,
+        .pkg 파일 위에 우클릭(컨트롤 클릭)해서 열고 팝업 윈도우에 Open을 클릭한다.        
+        Git을 설치한 후에 <code>/Applications</code> 폴더에는 아무것도 없는데 Git이 명령라인 프로그램이라서 그렇다.
+        <strong>OS X (10.5-10.8) 이전 버전에 대해서</strong> "snow-leopard" 라는 이름이 붙은
+        <a href="http://sourceforge.net/projects/git-osx-installer/files/">available here</a> 목록에서 가장 최신 
+        설치자를 사용한다. 
       </p>
     </div>
     <div class="col-md-4">
-      <h4 id="git-linux">Linux</h4>
+      <h4 id="git-linux">리눅스(Linux)</h4>
       <p>
-        If Git is not already available on your machine you can try to
-        install it via your distro's package manager. For Debian/Ubuntu run
-        <code>sudo apt-get install git</code> and for Fedora run
-        <code>sudo dnf install git</code>.
+      	Git이 컴퓨터에 설치되어 있지 않다면,
+      	배포판 팩키지 관리자를 통해서 설치한다.
+      	데비안/우분투 배포판의 경우 <code>sudo apt-get install git</code>,
+      	페도라 배포판의 경우 <code>sudo dnf install git</code> 명령어를 사용해서 설치한다.
       </p>
     </div>
   </div>
@@ -425,56 +421,51 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
   <h3>텍스트 편집기(Text Editor)</h3>
 
   <p>
-    When you're writing code, it's nice to have a text editor that is
-    optimized for writing code, with features like automatic
-    color-coding of key words.  The default text editor on macOS and
-    Linux is usually set to Vim, which is not famous for being
-    intuitive.  If you accidentally find yourself stuck in it, try
-    typing the escape key, followed by <code>:q!</code> (colon, lower-case 'q',
-    exclamation mark), then hitting Return to return to the shell.
+  	코드를 작성할 때, 키워드에 대해 자동 색상 기능을 갖는 코드작성에 최적화된 텍스트 편집기를 갖추면 최상이다.
+  	맥OS나 리눅스의 경우 기본설치된 텍스트 편집기는 Vim으로 지정되어 있는데 직관적이지 않은 것으로 악명이 높다.
+  	Vim을 사용하다 꼬이게 되면 Esc 키를 누른 후에 <code>:q!</code> (콜론, 소문자 'q', 느낌표)를 입력하고 나서
+  	엔터키를 치게 되면 쉘로 빠져나온다.
   </p>
 
   <div class="row">
     <div class="col-md-4">
       <h4 id="editor-windows">Windows</h4>
       <p>
-        nano is a basic editor and the default that instructors use in the workshop.
-        It is installed along with Git.
+      	워크샵에서 강사가 사용할 기본 편집기는 나노(nano)다.
+      	나노 편집기는 Git 설치할 때 따라서 함께 설치된다.
       </p>
       <p>
-        Others editors that you can use are
-        <a href="https://notepad-plus-plus.org/">Notepad++</a> or
-        <a href="https://www.sublimetext.com/">Sublime Text</a>.
-        <strong>Be aware that you must
-          add its installation directory to your system path.</strong>
-        Please ask your instructor to help you do this.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="editor-macosx">macOS</h4>
-      <p>
-        nano is a basic editor and the default that instructors use in the workshop.
-        See the Git installation <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a>
-        for an example on how to open nano.
-        It should be pre-installed.
-      </p>
-      <p>
-        Others editors that you can use are
-        <a href="https://www.barebones.com/products/textwrangler/">Text Wrangler</a> or
-        <a href="https://www.sublimetext.com/">Sublime Text</a>.
+      	학습참가자가 사용할 수 있는 다른 편집기에는 
+        <a href="https://notepad-plus-plus.org/">Notepad++</a>,
+        <a href="https://www.sublimetext.com/">Sublime Text</a>이 있다.
+        <strong>시스템 경로에 편집기 설치 디렉토리를 추가해야하는 점에 유의한다.</strong>
+        경로설정에 도움이 필요한 경우 강사에게 부탁한다.
       </p>
     </div>
     <div class="col-md-4">
-      <h4 id="editor-linux">Linux</h4>
+      <h4 id="editor-macosx">맥(macOS)</h4>
       <p>
-        nano is a basic editor and the default that instructors use in the workshop.
-        It should be pre-installed.
+        워크샵에서 강사가 사용할 기본 편집기는 나노(nano)다.
+        나노 편집기를 여는 방법에 대해서 <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">동영상 튜토리얼(video tutorial)</a>에 
+        나온 Git 설치방법을 참고한다. 나노는 맥에 기본 설치되어 있다.
       </p>
       <p>
-        Others editors that you can use are
+        학습참가자가 사용할 수 있는 다른 편집기에는 
+        <a href="https://www.barebones.com/products/textwrangler/">Text Wrangler</a>,
+        <a href="https://www.sublimetext.com/">Sublime Text</a>가 있다.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h4 id="editor-linux">리눅스(Linux)</h4>
+      <p>
+        워크샵에서 강사가 사용할 기본 편집기는 나노(nano)다.
+        나노는 리눅스에 기본 설치되어 있다.
+      </p>
+      <p>
+        학습참가자가 사용할 수 있는 다른 편집기에는 
         <a href="https://wiki.gnome.org/Apps/Gedit">Gedit</a>,
-        <a href="https://kate-editor.org/">Kate</a> or
-        <a href="https://www.sublimetext.com/">Sublime Text</a>.
+        <a href="https://kate-editor.org/">Kate</a>,
+        <a href="https://www.sublimetext.com/">Sublime Text</a>가 있다.
       </p>
     </div>
   </div>
@@ -577,48 +568,48 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
   <h3>R</h3>
 
   <p>
-    <a href="https://www.r-project.org">R</a> is a programming language
-    that is especially powerful for data exploration, visualization, and
-    statistical analysis. To interact with R, we use
-    <a href="https://www.rstudio.com/">RStudio</a>.
+  	<a href="https://www.r-project.org">R</a>은 프로그래밍 언어로 
+  	데이터 탐색, 시각화, 통계분석에 특히 강점이 있다. 
+  	R을 사용하는데 <a href="https://www.rstudio.com/">RStudio</a>를 사용한다.
   </p>
 
   <div class="row">
     <div class="col-md-4">
-      <h4 id="r-windows">Windows</h4>
-      <a href="https://www.youtube.com/watch?v=q0PjTAylwoU">Video Tutorial</a>
+      <h4 id="r-windows">윈도우</h4>
+      <a href="https://www.youtube.com/watch?v=q0PjTAylwoU">동영상 튜토리얼(Video Tutorial)</a>
       <p>
-        Install R by downloading and running
-        <a href="https://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a>
-        from <a href="https://cran.r-project.org/index.html">CRAN</a>.
-        Also, please install the
-        <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
-        Note that if you have separate user and admin accounts, you should run the 
-        installers as administrator (right-click on .exe file and select "Run as 
-        administrator" instead of double-clicking). Otherwise problems may occur later, 
-        for example when installing R packages.
+      	R을 설치하려면 <a href="https://cran.r-project.org/index.html">CRAN</a>에서 
+      	<a href="https://cran.r-project.org/bin/windows/base/release.htm">.exe 파일</a>을 다운로드 
+      	해서 실행한다.
+      	또한, <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>도 
+      	설치한다.
+      	주의할 점은 사용자(user) 계정과 관리자(admin) 계정을 따로 갖고 있는 경우 
+      	관리자(administrator)로 설치해야 한단. 관리자 설치방법은 더블클릭 대신에 .exe 파일 위에 우클릭하고 
+      	"Run as administrator"를 선택하면 된다. 이렇게 설치하지 않게 되면 나중에 R 팩키지 설치단계에서 문제가 
+      	발생한다.
       </p>
     </div>
     <div class="col-md-4">
-      <h4 id="r-macosx">macOS</h4>
-      <a href="https://www.youtube.com/watch?v=5-ly3kyxwEg">Video Tutorial</a>
+      <h4 id="r-macosx">맥(macOS)</h4>
+      <a href="https://www.youtube.com/watch?v=5-ly3kyxwEg">동영상 튜토리얼(Video Tutorial)</a>
       <p>
-        Install R by downloading and running
-        <a href="https://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a>
-        from <a href="https://cran.r-project.org/index.html">CRAN</a>.
-        Also, please install the
-        <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
+      	<a href="https://cran.r-project.org/index.html">CRAN</a> 웹사이트에서 
+      	<a href="https://cran.r-project.org/bin/macosx/R-latest.pkg">.pkg 파일</a>을 
+      	다운로드 해서 실행한다.
+      	또한, <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>도 
+      	설치한다.
       </p>
     </div>
     <div class="col-md-4">
-      <h4 id="r-linux">Linux</h4>
+      <h4 id="r-linux">리눅스(Linux)</h4>
       <p>
-        You can download the binary files for your distribution
-        from <a href="https://cran.r-project.org/index.html">CRAN</a>. Or
-        you can use your package manager (e.g. for Debian/Ubuntu
-        run <code>sudo apt-get install r-base</code> and for Fedora run
-        <code>sudo dnf install R</code>).  Also, please install the
-        <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
+      	<a href="https://cran.r-project.org/index.html">CRAN</a>에서 해당 배포판에 적합한 
+      	바이너리 파일을 다운로드 하거나,
+      	팩키지 관리자를 사용한다. 예를 들어 데비안/우분투 배포판의 경우 
+      	<code>sudo apt-get install r-base</code>, 페도라의 경우 <code>sudo dnf install R</code>
+      	명령어를 실행한다.
+      	또한, <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>도 
+      	설치한다.
       </p>
     </div>
   </div>
@@ -628,16 +619,15 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
   <h3>SQLite</h3>
 
   <p>
-    SQL is a specialized programming language used with databases.  We
-    use a simple database manager called
-    <a href="https://www.sqlite.org/">SQLite</a> in our lessons.
+  	SQL은 데이터베이스와 함께 사용하는 특수한 프로그래밍 언어다.
+  	워크샵에서 <a href="https://www.sqlite.org/">SQLite</a>라는 단순한 데이터베이스 관리자를 사용한다.
   </p>
 
   <div class="row">
     <div class="col-md-4">
-      <h4 id="sql-windows">Windows</h4>
+      <h4 id="sql-windows">윈도우</h4>
       <p>
-        The <a href="https://www.sqlite.org/download.html">
+        <a href="https://www.sqlite.org/download.html">
           {% if page.carpentry == "swc" %}
           Software Carpentry
           {% elsif page.carpentry == "dc" %}
@@ -645,29 +635,28 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
           {% elsif page.carpentry == "lc" %}
           Library Carpentry
           {% endif %}
-          Windows Installer
+          윈도우 설치자(Windows Installer)
 	</a>
-        installs SQLite for Windows.
-        If you used the installer to configure nano, you don't need to run it again.
+	    를 통해 윈도우용 SQLite를 설치한다.
+	    나노(nano) 편집기 환경설정하는데 설치자를 사용했다면, 다시 실행할 필요는 없다.
       </p>
     </div>
     <div class="col-md-4">
-      <h4 id="sql-macosx">macOS</h4>
+      <h4 id="sql-macosx">맥(macOS)</h4>
       <p>
-        SQLite comes pre-installed on macOS.
+      	맥OS의 경우 SQLite는 사전 설치되어 있다.
       </p>
     </div>
     <div class="col-md-4">
-      <h4 id="sql-linux">Linux</h4>
+      <h4 id="sql-linux">리눅스</h4>
       <p>
-        SQLite comes pre-installed on Linux.
+        리눅스의 경우 SQLite는 사전 설치되어 있다.
       </p>
     </div>
   </div>
 
-  <p><strong>If you installed Anaconda, it also has a copy of SQLite
-    <a href="https://github.com/ContinuumIO/anaconda-issues/issues/307">without support to <code>readline</code></a>.
-    Instructors will provide a workaround for it if needed.</strong></p>
+  <p><strong>아나콘다를 설치한 경우, <a href="https://github.com/ContinuumIO/anaconda-issues/issues/307"><code>readline</code>지원 안 되는</a>
+  	SQLite 사본이 함께 설치되는데, 필요한 경우 강사가 회피하는 법(workround)을 알려줄 것이다.</strong></p>
 </div> {% comment %} End of 'SQLite' section. {% endcomment %}
 
 <div id="openrefine"> {% comment %} Start of 'OpenRefine' section. {% endcomment %}
