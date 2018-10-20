@@ -13,7 +13,7 @@ enddate: 2018-10-28        # machine-readable end date for the workshop in YYYY-
 instructor: ["이광춘"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
 helper: ["이지현"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 email: ["kwangchun.lee.7@gmail.com"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
-collaborative_notes:             # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
+collaborative_notes:   "https://pad.carpentries.org/2018-10-27-hallym"          # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
 eventbrite: "51353898894"          # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
 
@@ -221,7 +221,7 @@ eventbrite: "51353898894"          # optional: alphanumeric key for Eventbrite r
 {% endcomment %}
 {% if page.collaborative_notes %}
 <p id="collaborative_notes">
-  We will use this <a href="{{page.collaborative_notes}}">collaborative document</a> for chatting, taking notes, and sharing URLs and bits of code.
+  채팅, 받아적기, URL과 실습 코드 공유를 위해서 <a href="{{page.collaborative_notes}}">Etherpad 문서</a>를 사용합니다.
 </p>
 {% endif %}
 
@@ -286,7 +286,9 @@ eventbrite: "51353898894"          # optional: alphanumeric key for Eventbrite r
   강사나 조교에게 <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">환경설정 문제와 해결책 위키 웹페이지</a>가 도움이 될 수 있다.
 </p>
 
-<div id="shell"> {% comment %} Start of 'shell' section. {% endcomment %}
+<div id="shell"> {% comment %} S
+
+tart of 'shell' section. {% endcomment %}
   <h3>Bash 쉘 (Bash Shell)</h3>
 
   <p>
